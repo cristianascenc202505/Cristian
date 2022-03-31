@@ -1,7 +1,12 @@
-n=str(input("Introduzca una cadena de texto: "))
+alfabeto=("AaBbCcDdEeFfGgHhIiJjKkLlMmNnÑñOoPpQqRrSsTtUuVvWwXxYyZz")
+texto=str(input("Digite la palabra: "))
+contar=0
 
-for l in n:
-    if  not l.isalpha():
-        print(f"No es una letra ({l})")
+for i in texto:
+    if i in alfabeto:
+        contar+=1
     else:
-        print(f"Es una letra ({l})")
+        print("Se ha encontrado caracteres NO alfabeticos")
+        break
+if contar==len(texto):
+    print("Todos los caracteres son alfabeticos ")
